@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Data - Environ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-layout">
+        <div class="brand-initials">CS</div>
+        <aside class="sidebar">
+            <div class="sidebar-header"> <h1>DashBoard</h1> </div>
+            <nav class="sidebar-nav"> <ul> <li><a href="home.html"><i data-lucide="layout-dashboard"></i> Home</a></li> <li><a href="submit.html" class="active"><i data-lucide="file-plus-2"></i> Submit Data</a></li> <li><a href="view.html"><i data-lucide="area-chart"></i> View Data</a></li> <li><a href="history.html"><i data-lucide="history"></i> History</a></li> </ul> </nav>
+            <button class="btn logout-btn"><i data-lucide="log-out"></i> Logout</button>
+        </aside>
+        <main class="main-content">
+            <div class="content-wrapper">
+                <a href="home.html" class="shortcut-link"><i data-lucide="arrow-left"></i> Back to Home</a>
+                <div class="page-header">
+                    <h1>Submit New Pollution Data</h1>
+                    <p>Enter the measured levels for each category below.</p>
+                </div>
+                <form id="data-submission-form" class="content-card">
+                    <div class="form-section">
+                        <h3><i data-lucide="wind"></i> Air Pollution</h3>
+                        <div class="form-grid">
+                            <div class="input-group"><input type="number" id="air-input" placeholder="PM2.5 Level (µg/m³)" required></div>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <h3><i data-lucide="waves"></i> Water Pollution</h3>
+                         <div class="form-grid">
+                            <div class="input-group"><input type="number" id="water-input" placeholder="BOD Level (mg/L)" required></div>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <h3><i data-lucide="volume-2"></i> Sound Pollution</h3>
+                         <div class="form-grid">
+                            <div class="input-group"><input type="number" id="sound-input" placeholder="Daytime Level (dBA)" required></div>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <h3><i data-lucide="mountain"></i> Land Pollution</h3>
+                         <div class="form-grid">
+                            <div class="input-group"><input type="number" id="land-input" placeholder="Hazardous Waste (tons)" required></div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Analyze & Submit Data</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

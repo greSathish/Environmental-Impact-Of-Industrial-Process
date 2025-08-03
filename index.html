@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="login-body">
+    <div class="brand-initials">CS</div>
+    <main class="auth-container">
+        <!-- Login Form -->
+        <div id="login-card" class="auth-card">
+            <div class="card-header">
+                <i data-lucide="shield-check"></i>
+                <h1>Environmental Impact Of Industrial Process</h1>
+                <p>Sign in for your Company Dashboard</p>
+            </div>
+            <form id="login-form" class="card-body">
+                <div class="input-group">
+                    <i data-lucide="building-2"></i>
+                    <input type="text" id="login-company-name" placeholder="Enter Company Name" required>
+                </div>
+                <div class="input-group">
+                    <i data-lucide="lock"></i>
+                    <input type="password" id="login-password" placeholder="Enter Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign In</button>
+            </form>
+            <div class="card-footer">
+                <p>New here? <a href="#" id="show-register-link">Create a Account</a></p>
+            </div>
+        </div>
+
+        <!-- Registration Form-->
+        <div id="register-card" class="auth-card" style="display: none;">
+            <div class="card-header">
+                <i data-lucide="shield-check"></i>
+                <h1>Company Registration</h1>
+                <p>Create an account to begin monitoring</p>
+            </div>
+            <form id="register-form" class="card-body">
+                <div class="input-group">
+                    <i data-lucide="building-2"></i>
+                    <input type="text" id="register-company-name" placeholder="Enter Company Name" required>
+                </div>
+                <div class="input-group">
+                    <i data-lucide="mail"></i>
+                    <input type="email" id="register-company-email" placeholder="Enter Company Mail ID" required>
+                </div>
+                 <div class="input-group">
+                    <i data-lucide="map-pin"></i>
+                    <input type="text" id="register-company-location" placeholder="Enter Company Location" required>
+                </div>
+                <div class="input-group">
+                    <i data-lucide="lock"></i>
+                    <input type="password" id="register-password" placeholder="Set a Password" required>
+                </div>
+                <div id="password-feedback" class="password-rules">
+                    <p id="length" class="invalid">At least 4 characters</p>
+                    <p id="capital" class="invalid">At least one uppercase letter</p>
+                    <p id="number" class="invalid">At least one number</p>
+                    <p id="symbol" class="invalid">At least one symbol (!@#$%^&*_-)</p>
+                </div>
+                <button type="submit" class="btn btn-primary" disabled>Register</button>
+            </form>
+            <div class="card-footer">
+                <p>Already have an account? <a href="#" id="show-login-link">Sign In Instead</a></p>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

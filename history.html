@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission History - Environ</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-layout">
+        <div class="brand-initials">CS</div>
+        <aside class="sidebar">
+            <div class="sidebar-header"><h1>DashBoard</h1> </div>
+            <nav class="sidebar-nav"> <ul> <li><a href="home.html"><i data-lucide="layout-dashboard"></i> Home</a></li> <li><a href="submit.html"><i data-lucide="file-plus-2"></i> Submit Data</a></li> <li><a href="view.html"><i data-lucide="area-chart"></i> View Data</a></li> <li><a href="history.html" class="active"><i data-lucide="history"></i> History</a></li> </ul> </nav>
+            <button class="btn logout-btn"><i data-lucide="log-out"></i> Logout</button>
+        </aside>
+        <main class="main-content">
+            <div class="content-wrapper">
+                <div class="page-header" style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h1>Submission History</h1>
+                        <p id="history-company-name">A complete record of your company's previous data submissions.</p>
+                    </div>
+                    <div>
+                        <button id="download-history-pdf-btn" class="btn btn-secondary"><i data-lucide="download"></i> Download History</button>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th>Date & Time</th>
+                                <th>Air Level</th>
+                                <th>Water Level</th>
+                                <th>Sound Level</th>
+                                <th>Land Level</th>
+                            </tr>
+                        </thead>
+                        <tbody id="history-table-body">
+                            <!-- History rows will be on script.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
